@@ -3,7 +3,7 @@ import axios from "axios";
 const isProduction = window.location.hostname !== 'localhost';
 
 const BASE_URL = isProduction
-    ? 'https://store-ratings-app.onrender.com/api'
+    ? 'https://ratings-store.onrender.com/api'
     : 'http://localhost:5000/api';
 const instance = axios.create({
     baseURL: BASE_URL,
