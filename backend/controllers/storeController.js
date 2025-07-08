@@ -23,6 +23,7 @@ const getStores = async (req, res) => {
             //  in second (2-1) = 1* 5 = 5 skips .
             skip: (pageNumber - 1) * pageSize,
             take: pageSize,
+
         }),
         prisma.store.count({
             where: {

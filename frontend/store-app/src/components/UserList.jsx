@@ -86,7 +86,7 @@ const UserList = () => {
                 <p className="text-gray-500">Loading users...</p>
             ) : (
                 <div className="overflow-auto">
-                    <table className='w-full table-auto border-collapse border'>
+                    <table className='w-full table-auto border-collapse border min-w-[700px]'>
                         <thead>
                             <tr className='bg-gray-100'>
                                 <th className='p-2 border text-left'>Name</th>

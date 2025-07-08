@@ -40,15 +40,15 @@ const Navbar = () => {
                 <div className="hidden md:flex gap-4 items-center">
                     {authUser ? (
                         <>
-                            <span className="text-sm bg-gray-200 px-2 py-1 rounded-sm  w-fit capitalize">
+                            <div className="p-2 ml-2 text-sm font-medium bg-gray-100  rounded-sm  w-fit capitalize">
                                 Hello, {authUser.name} ({authUser.role})
-                            </span>
+                            </div>
                             {authUser.role === 'ADMIN' && (
                                 <>
                                     <Link to="/admin/users" className="font-semibold hover:underline">Users</Link>
                                     <Link to="/admin/stores" className="font-semibold hover:underline">Stores</Link>
-                                    <Link to="/admin/create-user" className="font-semibold hover:underline">Create</Link>
-                                    <Link to="/admin/create-store" className="font-semibold hover:underline">Store</Link>
+                                    <Link to="/admin/create-user" className="font-semibold hover:underline">AddUser</Link>
+                                    <Link to="/admin/create-store" className="font-semibold hover:underline">AddStore</Link>
                                 </>
                             )}
                             {/* <span className='text-sm px-1 py-1 '>

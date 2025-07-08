@@ -6,9 +6,16 @@ const { sendCredentialsEmail } = require("../utils/mailer")
 // normal user-admin-owner store
 const createUsers = async (req, res) => {
     const { name, email, password, address, role } = req.body
+
     if (!['ADMIN', 'OWNER', 'USER'].includes(role)) {
         return res.status(400).json({ error: 'Invalid role' });
     }
+
+    if (!/(?=.*[A-Z])(?=.*[!@#$%^&*])/.test(password) || password.length < 8 || password.length > 16)
+        return res.status(400).json({
+            error: 'Password must be 8-16 chars, include uppercase & special char'
+        });
+
     const existingUser = await prisma.user.findUnique({
         where: {
             email: email

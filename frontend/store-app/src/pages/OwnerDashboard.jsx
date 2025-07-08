@@ -40,7 +40,7 @@ const OwnerDashboard = () => {
                             store.ratings.length === 0 ? (
                                 <p className='text-sm text-gray-600'>No ratings submitted yet.</p>
                             ) : (
-                                <div className="overflow-x-auto ">
+                                <div className="overflow-x-auto">
                                     <table className='table w-full border border-collapse mt-3 min-w-[600px]'>
                                         <thead className='bg-gray-200'>
                                             <tr>

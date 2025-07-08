@@ -52,7 +52,10 @@ const StoreDetails = () => {
     }
     if (loading) return (
         <main className="max-w-2xl mx-auto p-6">
-            <div className="space-y-4 ">
+            <Link to='/dashboard' className='text-blue-600 hover:underline mb-5 inline-block'>&larr; Back to Dashboard</Link>
+            <div
+                className=" rounded-2xl shadow-md p-6 border space-y-4 animate-pulse"
+            >
                 {[...Array(5)].map((_, i) => (
                     <div
                         key={i}
@@ -66,7 +69,11 @@ const StoreDetails = () => {
     return (
         <main className="max-w-2xl mx-auto p-6">
             <Link to='/dashboard' className='text-blue-600 hover:unerline mb-5 inline-block'>&larr; Back to Dashboard</Link>
-            <div className="bg-white rounded-2xl shadow-md p-6 border space-y-4">
+            <div className="bg-white rounded-2xl shadow-md p-6 border space-y-4"
+                style={{
+                    boxShadow: " rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+                }}
+            >
                 <h3 className="text-2xl font-bold text-gray-800">{store.name}</h3>
 
                 <p className="text-gray-700">

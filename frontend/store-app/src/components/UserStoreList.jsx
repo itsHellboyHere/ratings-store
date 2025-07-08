@@ -70,12 +70,24 @@ const UserStoreList = () => {
             </div>
             {
                 loading ? (
-                    <p>Loading...</p>
+                    <div className='max-w-4xl mx-auto space-y-4 h-screen'>
+                        <div className="space-y-4 ">
+                            {[...Array(4)].map((_, i) => (
+                                <div
+                                    key={i}
+                                    className=" mt-6 w-full h-40 bg-gray-200 rounded animate-pulse"
+                                ></div>
+                            ))}
+                        </div>
+                    </div>
                 ) : (
                     <>
                         <ul className='space-y-4'>
                             {stores.map((store) => (
-                                <li className='p-5 border roudned shadow' key={store.id}>
+                                <li className='p-5 border roudned shadow' key={store.id} style={
+                                    {
+                                        boxShadow: "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+                                    }}>
                                     <h3 className='text-lg font-semibold'>{store.name}</h3>
                                     <p className="text-sm text-gray-700">{store.address}</p>
                                     <p className="mt-1 font-semibold mb-2">
@@ -88,6 +100,11 @@ const UserStoreList = () => {
                                 </li>
                             ))}
                         </ul>
+                        {!loading && stores.length === 0 && search && (
+                            <p className="text-center text-gray-500 mt-10 text-sm">
+                                <span>Nothing found for "<strong>{search}</strong>"</span>
+                            </p>
+                        )}
                         {stores.length > 0 && (
                             <div className="flex items-center justify-between mt-6">
                                 <button

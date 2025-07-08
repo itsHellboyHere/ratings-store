@@ -77,7 +77,7 @@ const Login = () => {
                         >
                             {loading ? "Logging in..." : "Login"}
                         </button>
-                        <p className="text-sm  font-medium text-gray-700 ">Already have an account ? <Link to={"/signup"} className="text-blue-700 hover:text-blue-500">SignUp</Link></p>
+                        <p className="text-sm  font-medium text-gray-700 ">New Here :) <Link to={"/signup"} className="text-blue-700 hover:text-blue-500">SignUp</Link></p>
                     </form>
 
                 </div>
