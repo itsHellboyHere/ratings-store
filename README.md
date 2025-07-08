@@ -1,6 +1,7 @@
 # 🏪 Store App
 🌐 Live App URL:
-🔗 https://store-ratings-app.onrender.com
+ 
+👉 [https://ratings-store.onrender.com](https://ratings-store.onrender.com)
 
 A role-based full-stack store management web application using Node.js, Express, React, Prisma, and PostgreSQL.
 Login Details for Testing every roles is below in the file. 
